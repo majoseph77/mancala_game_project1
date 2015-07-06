@@ -2,11 +2,11 @@
 
 ##Mancala is an ancient family of board games, and there are numerous variants. This is a version of the basic game, known as two-rank Mancala and also known as Kalah.
 
-##Difficulty: Average
+###Difficulty: Average
 
-##Time Required: 15 minutes
+###Time Required: 15 minutes
 
-##Here's How:
+###Here's How:
 
 - The Mancala 'board' is made up of two rows of six holes, or pits, each. If you don't have a Mancala board handy, an empty egg carton can work.
 
@@ -30,3 +30,17 @@ Moving counter-clockwise, the player deposits one of the stones in each hole unt
 - The player who still has pieces on his side of the board when the game ends captures all of those pieces.
 
 - Count all the pieces in each store. The winner is the player with the most pieces.
+
+
+##User Stories
+
+- As a user I want to know how to play the game. How I win, lose and gain points.
+
+- As a user I want to know how to play the game. How I win, lose and gain points.
+
+- As a user I want the game to be colorful ,have sound an animation.
+
+- As an administrator I want the board to clear at the end of each game to signify a brand new game has started
+
+- As an administrator I want to create a board where each container has a specific ID
+
