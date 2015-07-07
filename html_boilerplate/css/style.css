@@ -9,7 +9,8 @@
 .header{
   width: 1200px;
   height:150px;
-  background-color: gray;
+  background-color: black;
+  color: white;
   text-align: center;
 }
 
