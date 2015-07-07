@@ -34,13 +34,19 @@ Moving counter-clockwise, the player deposits one of the stones in each hole unt
 
 ##User Stories
 
-- As a user I want to know how to play the game. How I win, lose and gain points.
-
-- A
+- As a user I want to know how to play the game. How I win,
+lose and gain points.
 
 - As a user I want the game to be colorful ,have sound an animation.
 
-- As an administrator I want the board to clear at the end of each game to signify a brand new game has started
+- As an administrator I want the board to clear at the end of each game
+ to signify a brand new game has started
 
-- As an administrator I want to create a board where each container has a specific ID
+- As an administrator I want to create a board where each container
+ has a specific ID
+
+-As an administrator I want the stones to move to each pit with animation.
+
+-As an administrator I want the players to only be able to move their
+stones on their turn.
 
