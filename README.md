@@ -24,6 +24,7 @@ This is a version of the basic game, known as two-rank Mancala and also known as
 
 - If the last piece you drop is in your own store, you get a free turn.
 
+<!-- //might git red of this rule// -->
 - If the last piece you drop is in an empty hole on your side, you capture that
   piece and any pieces in the hole directly opposite.
 
@@ -68,7 +69,57 @@ be attached to the right side of the board.
 
 <!-- //player logic user stories completed 7.7.15 11.24am// -->
 
+##Turn Logic
+- As a creator I want the game to be able to determine if a pit has a numeric
+value of 0 or some other numeric value so that it can determine whether
+a players turn has ended or will continue.
+
+-As a creator I want the game to be aware of which side stones are being
+dropped (playerSide, computerSide) so the game can determine whether a
+players turn has come to an end or will continue.
+
+
 ##Move Logic
+- As a creator I always want the computer to make the first move starting
+from the same designated pit, to lessen the chance of loop breaks.
+
+- As a creator I want to be able to add and subtract numerical values
+from pits #1-12 to coincide with how many stones are being placed into
+each pit. And only add numerical values to pit #a and #b to keep the total
+number of stones in pits #a and #b for the purpose of win logic.
+
+- As a creator I want to be able to make pits #a and #b unavaliable for
+stone placement based on the current players turn.
+
+- As a creator if the last number ever coincides with pit #a, or pit #b
+I want to add that to the total number of #a or #b to assist in win logic.
+
+- As a creator I want to create a loop where the number of stones in one pit
+will be captured and dropped one stone into each of the following until it
+comes to a pit with a value of 0, if the last stone is dropped into a pit that
+has a numerical value >0 then it will add 1 to the value and continue. For
+example all pits have a starting value of 4, if 'pit#1' has 4 stones then
+1 stone will be added to pits #2-#5 which will now have a value of '5'. Since
+pit '#5' new value is now 5 and not 0 those 5 stones will be removed from
+'pit#5'. 'Pit#5' will then have a value of '0' and the value of 1 will be added to
+to pits #6-#10.
+
+<!-- ///////////////////////
+//variables to create:/
+var empty            //
+var #aTotal;        ///
+var #bTotal;         //
+/////////////////////// -->
+
+- "First Move" Computer will pick up 4 stones from pit #12
+and then drop each stone into the next pits one by one until
+the last stone is dropped into pit #8. Computer will then pick
+up all stones in pit #8 (5) and continue to drop them into the
+pits, excluding the human players large pit #a. Landing in pit#4
+computer will then pick up all stones (5) and continue dropping
+1 stone in their own large pit #b. Computer will land in pit #11
+and continue process to pit #1
+
 
 
 
