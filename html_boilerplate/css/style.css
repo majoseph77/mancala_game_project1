@@ -4,3 +4,24 @@
     margin: 0;
   }
 
+
+
+.header{
+  width: 1200px;
+  height:300px;
+  background-color: gray;
+}
+.game_board{
+  width: 1200px;
+  height:500px;
+  background-color: black;
+}
+
+
+
+.footer{
+  width: 1200px;
+  height: 150px;
+  background-color: gray;
+  text-align: center;
+}
