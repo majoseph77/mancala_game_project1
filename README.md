@@ -66,6 +66,8 @@ and be attatched to the left side of the board.
 -As a creator I want the human player to go second and
 be attached to the right side of the board.
 
+<!-- //player logic user stories completed 7.7.15 11.24am// -->
+
 ##Move Logic
 
 
