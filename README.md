@@ -67,7 +67,7 @@ and be attatched to the left side of the board.
 -As a creator I want the human player to go second and
 be attached to the right side of the board.
 
-<!-- //player logic user stories completed 7.7.15 11.24am// -->
+<!-- //turn logic user stories completed 7.7.15 11.24am// -->
 
 ##Turn Logic
 - As a creator I want the game to be able to determine if a pit has a numeric
@@ -80,13 +80,18 @@ players turn has come to an end or will continue.
 
 
 ##Move Logic
-- As a creator I always want the computer to make the first move starting
-from the same designated pit, to lessen the chance of loop breaks.
+
+-As a creator I want to create an object that will hold the
+numerical values of each pit on the board. So that the addition
+and subtraction of stones can stay accounted for.
 
 - As a creator I want to be able to add and subtract numerical values
 from pits #1-12 to coincide with how many stones are being placed into
 each pit. And only add numerical values to pit #a and #b to keep the total
 number of stones in pits #a and #b for the purpose of win logic.
+
+- As a creator I always want the computer to make the first move starting
+from the same designated pit, to lessen the chance of loop breaks.
 
 - As a creator I want to be able to make pits #a and #b unavaliable for
 stone placement based on the current players turn.
@@ -108,7 +113,8 @@ to pits #6-#10.
 //variables to create:/
 var empty            //
 var #aTotal;        ///
-var #bTotal;         //
+var #bTotal;       ///
+var value;          //
 /////////////////////// -->
 
 - "First Move" Computer will pick up 4 stones from pit #12
