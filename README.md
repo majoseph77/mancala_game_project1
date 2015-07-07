@@ -36,7 +36,7 @@ Moving counter-clockwise, the player deposits one of the stones in each hole unt
 
 - As a user I want to know how to play the game. How I win, lose and gain points.
 
-- As a user I want to know how to play the game. How I win, lose and gain points.
+- A
 
 - As a user I want the game to be colorful ,have sound an animation.
 

@@ -8,16 +8,58 @@
 
 .header{
   width: 1200px;
-  height:300px;
+  height:150px;
   background-color: gray;
+  text-align: center;
 }
 .game_board{
   width: 1200px;
   height:500px;
   background-color: black;
+  /*position: absolute;*/
+}
+
+#board-right{
+margin-top:84px;
+margin-bottom: 5px;
+
+width:100px;
+height:100px;
+padding:10px;
+/*background-color: pink;*/
+
+}
+
+#board-left{
+margin-bottom: 5px;
+margin-top: 5px;
+width:100px;
+height:100px;
+padding:10px;
 }
 
 
+#lgpta,#a{
+  width:100px;
+  height:490px;
+  background-color: white;
+  float:left;
+
+}
+
+#b{
+  width:100px;
+  height:490px;
+  background-color: white;
+  float:right;
+  position: relative;
+  top: -490px;
+}
+.pit{
+  width:166px;
+  height:150px;
+  padding: 5px;
+}
 
 .footer{
   width: 1200px;
