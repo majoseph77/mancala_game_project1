@@ -31,69 +31,84 @@ value of pits= i
 i>0; board.length; i+
 
 (computerPlayer)
-<!-- //pit#10 will always be chosen first// -->
-"Beginning values of every game"
-value of #a=0
-value of #1 =4
-value of #2= 4
-value of #3= 4
-value of #4= 4
-value of #5= 4
-value of #6= 4
-value of #7= 4
-value of #8= 4
-value of #9= 4
-value of #10=4
-value of #11=4
-value of #12=4
-value of #b= 0
+<!-- //order of board based on placement of pits. clockwise
+  pit#10 will always be chosen first. base value of all pits with number id
+   is 4// -->
+"Beginning values of all pits before any moves"
+#7=  4
+#8=  4
+#9=  4
+#10= 4
+#11= 4
+#12= 4
+#b=  0
+#6=  4
+#5=  4
+#4=  4
+#3=  4
+#2=  4
+#1=  4
+#a=  0
 
+"Computer moves; pit#10, #b belongs to computer"
 
+#7=  4 -> 4
+#8=  4 -> 4
+#9=  4 -> 4
+#10= 4 -> 0
+#11= 4 -> 5
+#12= 4 -> 5
+#b=  0 -> 1
+#6=  4 -> 5
+#5=  4 -> 5
+#4=  4 -> 4
+#3=  4 -> 4
+#2=  4 -> 4
+#1=  4 -> 4
+#a=  0 -> 0
 
-when pit #10 is chosen first
-new values will be:
-<!-- //value of #a remained the same and the value of #1
-increased by 1 because it was computers move and #a belongs
-to player, move by computer in #a not allowed// -->
+"still computers move last stone was dropped in #5
+which is on players side but the pit had an original value
+of 4 which is more than 0 so computer picks up original value
+of 4 and adds 1 from the original stones of #10 totaling 5 stones
+to be dropped in 5 more pits"
 
-value of #a=0
-value of #1 =5
-value of #2= 4
-value of #3= 4
-value of #4= 4
-value of #5= 4
-value of #6= 4
-value of #7= 4
-value of #8= 4
-value of #9= 4
-value of #10=4
-value of #11=5
-value of #12=5
-value of #b= 1
+#7=  4 -> 5
+#8=  4 -> 4
+#9=  4 -> 4
+#10= 0 -> 0
+#11= 5 -> 5
+#12= 5 -> 5
+#b=  1 -> 1
+#6=  5 -> 5
+#5=  5 -> 0
+#4=  4 -> 5
+#3=  4 -> 5
+#2=  4 -> 5
+#1=  4 -> 5
+#a=  0 -> 0
 
+<!-- //#a remained at 0 while value of #7 increased by 1 because
+it is still computers move and #a belongs to the player
+computer can not add any stones to players container move is
+illegal. -->
 
-<!-- since last pit that was added to was #1 and the value is
-greater than 0 (5>0) computers turn continues
-by picking up 5 stones and continuing to drop stones -->
+"still computers move last stone was dropped in #7
+which is on computers side. computer will take 5 stones
+and add 1 to the next 5 pits"
 
-"computers turn"
-    value of #a=0
-    value of #1 =5
-new value of #1 =0
-    value of #2= 5
-    value of #3= 5
-    value of #4= 5
-    value of #5= 5
-    value of #6= 5
-<!-- //last stone dropped in #6//     -->
-    value of #7= 4
-    value of #8= 4
-    value of #9= 4
-    value of #10=4
-    value of #11=5
-    value of #12=5
-    value of #b= 1
-
-
-
+#7=  5 -> 0
+#8=  4 -> 5
+#9=  4 -> 5
+#10= 0 -> 1
+#11= 5 -> 6
+#12= 5 -> 6
+#b=  1 ->
+#6=  5 ->
+#5=  0 ->
+#4=  5 ->
+#3=  5 ->
+#2=  5 ->
+#1=  5 ->
+#a=  0 ->
 
