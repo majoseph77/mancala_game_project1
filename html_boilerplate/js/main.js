@@ -20,11 +20,11 @@ console.log("hello");
     });
 });
 
-var firstPlayerName = prompt("Lets Play Mancala! Player 1 enter your name", "name");
-var secondPlayerName= prompt("Lets Play Mancala! Player 1 enter your name", "name");
+// var firstPlayerName = prompt("Lets Play Mancala! Player 1 enter your name", "name");
+// var secondPlayerName= prompt("Lets Play Mancala! Player 1 enter your name", "name");
 
-var player1 = firstPlayerName;
-var player2 = secondPlayerName;
+// var player1 = firstPlayerName;
+// var player2 = secondPlayerName;
 
 
 var board = $('.pit, .large_pit');
@@ -37,8 +37,13 @@ var value = $(board).text();
 
 var empty = 0;
 
-var numstones =[0,4,4,4,4,4,4,0,4,4,4,4,4,4];
+var numstones =[0,4,4,4,4,4,4,4,4,4,4,4,4,0];
 
+var allPits = document.querySelectorAll(".pits");
+// console.log(allPits.length);
+for(var i=0; i<allPits.length; i++) {
+ allPits[i].innerHTML = numstones[i] ;
+}
 
 // function turn = function(player1,player2){
 
@@ -48,29 +53,33 @@ var numstones =[0,4,4,4,4,4,4,0,4,4,4,4,4,4];
 
 // };
 
+
+
+// function updateDisplay(){
+//   for(i=0; i<14; i++) {
+//     var s = numstones[i] === 0 ? "0" : numstones[i];
+//     $('#' + i).text(s);
+//   }
+// }
+
+// updateDisplay();
+
 // function move = function (numstones, empty, player1Side, player2Side){
 //   numstones
 
 // };
 
-function updateDisplay(){
-  for(i=0; i<14; i++) {
-    var s = numstones[i] === 0 ? "0" : numstones[i];
-    $('#' + i).text(s);
-  }
-}
+// var i = numstones[i]
+// for(i=0; i>0){
+//   i + numstones.length
 
-updateDisplay();
+// }
 
-var i = numstones[i]
-for(i=0; i>0 i++ ){
+// var i = numstones[i]
+// while(i>0){
+//   numstones[] + numstones.length
 
-}
-
-var i = numstones[i]
-while(i>0){
-
-}
+// }
 
 
 
