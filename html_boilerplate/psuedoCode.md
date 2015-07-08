@@ -20,6 +20,25 @@ and subtraction of stones can stay accounted for.
   "#b":0
 };`
 
+
+or
+
+var boardValue=[[4,4,4,4,4,4,0],
+              [4,4,4,4,4,4,0]];
+
+
+1. check html value
+2. store html value
+
+
+<!-- psuedo code for turn logic user story 1 -->
+##Turn Logic
+- As a creator I want the game to be able to determine if a pit has a numeric
+value of 0 or some other numeric value so that it can determine whether
+a players turn has ended or will continue.
+
+var empty= 0;
+
 <!-- //psuedo code for move logic user story 2// -->
 - As a creator I want to be able to add and subtract numerical values
 from pits #1-12 to coincide with how many stones are being placed into
@@ -103,7 +122,7 @@ and add 1 to the next 5 pits"
 #10= 0 -> 1
 #11= 5 -> 6
 #12= 5 -> 6
-#b=  1 ->
+#b=  1 -> 2
 #6=  5 ->
 #5=  0 ->
 #4=  5 ->
@@ -111,4 +130,29 @@ and add 1 to the next 5 pits"
 #2=  5 ->
 #1=  5 ->
 #a=  0 ->
+
+<!-- //last stone was dropped in computers pit #b
+so computer gets a new turn// -->
+
+"computers 2nd turn, begins with #12"
+#7=  0 ->
+#8=  5 ->
+#9=  5 ->
+#10= 1 ->
+#11= 6 ->
+#12= 6 ->
+#b=  2 ->
+#6=  5 ->
+#5=  0 ->
+#4=  5 ->
+#3=  5 ->
+#2=  5 ->
+#1=  5 ->
+#a=  0 ->
+
+
+
+
+
+
 
