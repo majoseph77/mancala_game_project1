@@ -54,9 +54,10 @@ box-shadow: inset 0 0 30px black, 0 0 30px black;
 }
 
 
-#lgpta,#a{
+.large_pita{
   width:100px;
   height:490px;
+  text-align: center;
   background-color: white;
   float:left;
   border-radius: 40px;
@@ -64,14 +65,15 @@ box-shadow: inset 0 0 30px black, 0 0 30px black;
 
 }
 
-#b{
+.large_pitb{
   width:100px;
   height:490px;
   background-color: white;
   float:right;
   position: relative;
-  top: -490px;
+  top: -300px;
   border-radius: 40px;
+  box-shadow: inset 0 0 15px black, 0 0 15px black;
 }
 .pit{
   width:166px;

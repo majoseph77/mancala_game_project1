@@ -81,7 +81,7 @@ players turn has come to an end or will continue.
 
 ##Move Logic
 
--As a creator I want to create an object that will hold the
+<!-- -As a creator I want to create an object that will hold the
 numerical values of each pit on the board. So that the addition
 and subtraction of stones can stay accounted for.
 
@@ -107,7 +107,17 @@ example all pits have a starting value of 4, if 'pit#1' has 4 stones then
 1 stone will be added to pits #2-#5 which will now have a value of '5'. Since
 pit '#5' new value is now 5 and not 0 those 5 stones will be removed from
 'pit#5'. 'Pit#5' will then have a value of '0' and the value of 1 will be added to
-to pits #6-#10.
+to pits #6-#10. -->
+
+- As a user I want to be able to know how many stones are in each of my pits
+and how many stones are in my opponents pits so I can know which option would
+be the best move.
+
+- As a user I want to see how many stones are in each pit after each turn. And
+how many stones are in my opponents large pit so that I can know if they have
+more points than me.
+
+-  As a user I want to know who has the current turn
 
 <!-- ///////////////////////
 //variables to create:/
