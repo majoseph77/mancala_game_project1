@@ -5,12 +5,15 @@
 
 var board = $('.pit, .large_pit');
 
+var boardValue=[[4,4,4,4,4,4,0],
+              [4,4,4,4,4,4,0]];
+
 var playerSide = $('#a, #1, #2, #3, #4, #5, #6');
 var computerSide= $('#7, #8, #9, #10, #11, #12, #b');
 
 var value = $(board).text();
 
-// var empty = $('')
+var empty = 0;
 
 
 //returns inner text of board//
@@ -32,3 +35,4 @@ var value= {
   "#12":4,
   "#b":0
 };
+
