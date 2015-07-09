@@ -154,5 +154,111 @@ so computer gets a new turn// -->
 
 
 
+var board = $('.pit, .large_pit');
+//this determines which side belongs to each player//
+var player1Side = $('#0, #1, #2, #3, #4, #5, #6');
+var player2Side= $('#7, #8, #9, #10, #11, #12, #13');
+
+//
+var numstones =[0,4,4,4,4,4,4,4,4,4,4,4,4,0];
+
+var allPits = document.querySelectorAll(".pits");
+
+// This code will initialize the board with number :-)
+(function init(){
+  for(var i=0; i<allPits.length; i++) {
+   allPits[i].innerHTML = numstones[i] ;
+  }
+})();
+
+// Listens for click on a specific pit and calls the move function.
+$(".pit").click(move);
+
+function move(){
+  // moveCount is equal to the number of stones in the pit clicked.
+  var moveCount = numstones[$(this).attr("id")];
+  // This resets the clicked pit to 0 in the DOM.
+  $(this).text(0);
+  // This resets the clicked pit in the array to 0.
+  numstones[$(this).attr("id")] = 0;
+
+  var index = $(this).attr("id");
+  for(var i = moveCount; moveCount >0; i--){
+    numstones[index]++;
+    var value = numstones[index];
+    var new_value = value ++;
+    allPits[i].innerHTML = new_value;
+    if(moveCount === 0)
+      break;
+    console.log($(allPits).text());
+
+
+  }
+
+}
+
+var moveCount = function(numstones){
+  numstones[$(this).attr("id")];
+}
+
+///this animates the page//
+
+$(".left").hover(function(){
+    $(this).css("background-color", "yellow");
+    }, function(){
+    $(this).css("background-color", "pink");
+});
+
+$(".right").hover(function(){
+    $(this).css("background-color", "red");
+    }, function(){
+    $(this).css("background-color", "green");
+});
+
+
+$(".large_pitb").hover(function(){
+    $(this).css("background-color", "blue");
+    }, function(){
+    $(this).css("background-color", "green");
+});
+
+$(".large_pita").hover(function(){
+    $(this).css("background-color", "blue");
+    }, function(){
+    $(this).css("background-color", "pink");
+});
+
+$(".footer").hover(function(){
+    $(this).css("background-color", "white");
+    }, function(){
+    $(this).css("background-color", "gray");
+});
+
+
+
+$("h1").click(function(){
+    var div = $("h1");
+    div.animate({left: '100px'}, "slow");
+    div.animate({height: '50px', opacity: '0.4'}, "slow");
+    div.animate({fontSize: '3em'}, "slow");
+});
+
+
+$("h2").click(function(){
+    var div = $("h2");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+
+
+
+});
+
+
 
 
