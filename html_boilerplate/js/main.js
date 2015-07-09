@@ -1,28 +1,28 @@
 
   console.log('activate framework!');
 
-//Global variables//
+
+// // This gets the players names to display the current players turn
 // var firstPlayerName = prompt("Lets Play Mancala! Player 1 enter your name", "name");
 // var secondPlayerName= prompt("Lets Play Mancala! Player 1 enter your name", "name");
+
+// //This stores the players inputed name//
 
 // var player1 = firstPlayerName;
 // var player2 = secondPlayerName;
 
+//This displays the name of the current players turn//
 
 
 
 
 
 var board = $('.pit, .large_pit');
-
-
+//this determines which side belongs to each player//
 var player1Side = $('#0, #1, #2, #3, #4, #5, #6');
 var player2Side= $('#7, #8, #9, #10, #11, #12, #13');
 
-var value = $(board).text();
-
-// var empty = ;
-
+//
 var numstones =[0,4,4,4,4,4,4,4,4,4,4,4,4,0];
 
 var allPits = document.querySelectorAll(".pits");
@@ -48,10 +48,10 @@ function move(){
   var index = $(this).attr("id");
 
   for(var i = moveCount; moveCount >= 0; i--){
-    numstones[index--]++;
-   var new_value = numstones[index--]++;
-    allPits[index--].innerHTML = new_value;
-    console.log(moveCount);
+    numstones[index]++;
+   var new_value = numstones[index]++;
+    allPits[i].innerHTML = new_value;
+    console.log(numstones);
 
     // number = parseInt(current)
     // new_value = number + 1
@@ -60,9 +60,74 @@ function move(){
 
 }
 
-$(".pit").hover(function(){
+$(".left").hover(function(){
+    $(this).css("background-color", "yellow");
+    }, function(){
+    $(this).css("background-color", "pink");
+});
+
+$(".right").hover(function(){
     $(this).css("background-color", "red");
-    });
+    }, function(){
+    $(this).css("background-color", "green");
+});
+
+
+$(".large_pitb").hover(function(){
+    $(this).css("background-color", "blue");
+    }, function(){
+    $(this).css("background-color", "green");
+});
+
+$(".large_pita").hover(function(){
+    $(this).css("background-color", "blue");
+    }, function(){
+    $(this).css("background-color", "pink");
+});
+
+$(".footer").hover(function(){
+    $(this).css("background-color", "white");
+    }, function(){
+    $(this).css("background-color", "gray");
+});
+
+
+
+// $(".pit").hover(function(){
+//     $(this).css("background-color", "red");
+//     });
+
+
+$("h1").click(function(){
+    var div = $("h1");
+    div.animate({left: '100px'}, "slow");
+    div.animate({height: '50px', opacity: '0.4'}, "slow");
+    div.animate({fontSize: '3em'}, "slow");
+});
+
+
+$("h2").click(function(){
+    var div = $("h2");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+
+
+
+});
+
+// function turn = function(player1,player2){
+//   if(move === player1Side){
+//     $(".current_player").text(player1)
+//  }else{
+//     $(".current_player").text(player2)
+//    }
+// };
 
 // When the pit is clicked,
 // function move(){
@@ -78,10 +143,6 @@ $(".pit").hover(function(){
 //   }
 
 // }
-
-$(".pit").hover(function(){
-    $(this).css("background-color", "red");
-    });
 
 
 // }
@@ -115,7 +176,11 @@ $(".pit").hover(function(){
 
 
 // function turn = function(player1,player2){
-
+//   if(move === player1Side){
+//     $(".current_player").text(player1)
+//  }else{
+//     $(".current_player").text(player2)
+//    }
 // };
 
 // function play = function(move, turn, updateDisplay){
@@ -161,6 +226,11 @@ $(".pit").hover(function(){
 //returns value of board//
 // $(board).eq(1).text()
 // "4"
+
+// var value = $(board).text();
+
+// // var empty = ;
+
 
 
 // i= text inside id create an array for i
