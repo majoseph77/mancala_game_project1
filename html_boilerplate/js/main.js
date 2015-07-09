@@ -46,19 +46,25 @@ function move(){
   numstones[$(this).attr("id")] = 0;
 
   var index = $(this).attr("id");
-
-  for(var i = moveCount; moveCount >= 0; i--){
+  for(var i = moveCount; moveCount >0; i--){
     numstones[index]++;
-   var new_value = numstones[index]++;
+    var value = numstones[index];
+    var new_value = value ++;
     allPits[i].innerHTML = new_value;
-    console.log(numstones);
+    if(moveCount === 0)
+      break;
+    console.log($(allPits).text());
 
-    // number = parseInt(current)
-    // new_value = number + 1
-    // allPits[stoneId--].innerHTML = new_value;
+
   }
 
 }
+
+var moveCount = function(numstones){
+  numstones[$(this).attr("id")];
+}
+
+///this animates the page//
 
 $(".left").hover(function(){
     $(this).css("background-color", "yellow");
@@ -91,11 +97,6 @@ $(".footer").hover(function(){
     $(this).css("background-color", "gray");
 });
 
-
-
-// $(".pit").hover(function(){
-//     $(this).css("background-color", "red");
-//     });
 
 
 $("h1").click(function(){
@@ -173,6 +174,9 @@ $("h2").click(function(){
 //     });
 // });
 
+    // number = parseInt(current)
+    // new_value = number + 1
+    // allPits[stoneId--].innerHTML = new_value;
 
 
 // function turn = function(player1,player2){
