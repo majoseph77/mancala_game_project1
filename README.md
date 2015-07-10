@@ -49,7 +49,7 @@ lose and gain points.
 ##Player Logic
 - As a user I want to play another player
 
-<!-- //turn logic user stories completed 7.7.15 11.24am// -->
+
 
 ##Turn Logic
 - As a user I want to know whose turn it is at all times
@@ -74,6 +74,30 @@ my move or not
 
 ## Design Approach
 - Bottom up design approach
+
+## Installation Instructions
+- Fork my repo git@github.com:majoseph77/mancala_game_project1.git
+
+- Clone
+
+- Read "README.md" for game instructions, user stories, and ongoing issues.
+
+## Ongoing User Stories, and features to be added
+- As a user I want to see how many stones are in each pit after each turn. And
+how many stones are in my opponents large pit so that I can know if they have
+more points than me.
+
+-  As a user I want to know who has the current turn so I can know if its
+my move or noturn
+
+
+## Icebox
+- As a user I want to see the stones move from pit to pit
+- As a user I want the current players turn to flash when its their
+  turn.
+- As a user I want the Welcome title to be animated in some sort of way
+- As a user I want to hear when the stones move
+
 
 
 
