@@ -1,3 +1,16 @@
+$(document).ready(function(){
+ var allPits = [];
+ for (var i = 0; i< 13; i++){
+     allPits.push(document.getElementById(i));
+ }
+
+
+ var numstones =[0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4];
+ (function init(){
+  for(var i=0; i<allPits.length; i++) {
+   allPits[i].innerText = numstones[i] ;
+  }
+})();
 
   console.log('activate framework!');
 
@@ -22,40 +35,44 @@ var board = $('.pit, .large_pit');
 var player1Side = $('#0, #1, #2, #3, #4, #5, #6');
 var player2Side= $('#7, #8, #9, #10, #11, #12, #13');
 
-//
-var numstones =[0,4,4,4,4,4,4,4,4,4,4,4,4,0];
 
-var allPits = document.querySelectorAll(".pits");
+
 
 // This code will initialize the board with number :-)
-(function init(){
-  for(var i=0; i<allPits.length; i++) {
-   allPits[i].innerHTML = numstones[i] ;
-  }
-})();
+
 
 // Listens for click on a specific pit and calls the move function.
 $(".pit").click(move);
 
 function move(){
+  console.log(this)
   // moveCount is equal to the number of stones in the pit clicked.
-  var moveCount = numstones[$(this).attr("id")];
+  var moveCount = parseInt(numstones[$(this).attr("id")]);
   // This resets the clicked pit to 0 in the DOM.
   $(this).text(0);
   // This resets the clicked pit in the array to 0.
-  numstones[$(this).attr("id")] = 0;
-
-  var index = $(this).attr("id");
-  for(var i = moveCount; moveCount >0; i--){
-    numstones[index]++;
-    var value = numstones[index];
-    var new_value = value ++;
-    allPits[i].innerHTML = new_value;
-    if(moveCount === 0)
-      break;
-    console.log($(allPits).text());
-
-
+  var index = parseInt($(this).attr("id"), 10);
+  numstones[index] = 0;
+//while stones in pit are >0 number of stones added to next pits will increase by 1, if 0
+//pit will have value of 0//
+  while (moveCount >= 0) {
+    (function(moveCount){
+        console.log(moveCount);
+        console.log(index);
+        //if id of pits is less than 13 value in pit will ncrease by 1//
+        if(index < 13){
+            index ++;
+        //Otherwise loop runs once//
+        }else {
+            index = 0;
+        }
+        numstones[index] ++;
+        //console.log(numstones[index]);
+        allPits[index].innerText = numstones[index];
+        //console.log($(allPits).text());
+    })(moveCount);
+    console.log(moveCount);
+    moveCount --;
   }
 
 }
@@ -121,7 +138,7 @@ $("h2").click(function(){
 
 
 });
-
+});
 // function turn = function(player1,player2){
 //   if(move === player1Side){
 //     $(".current_player").text(player1)
